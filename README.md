@@ -77,15 +77,21 @@ store state for Streamlit buttons and fields is:
 @session_state
 class MyState:
     counter: int = 0
-    query: str = ""
+    text: str = ""
 
-st.text_input("What would you like to ask?", key="MyState.query")
+st.text_input("Enter a text:", key="MyState.text")
+st.write(f"Text entered: {MyState.text}")
 ```
 
 Note that the `key` argument to store and persist the `text_input` value is
 specified with the name of the singleton class and the key on a string. This
 feature is provided by the `session_state` decorator and allow seamless usage
 with any Streamlit widget that accepts a `key` argument.
+
+> Streamlit widgets that accept a `key` argument does not accept that this key
+> gets modified by other agents (e.g. other widgets or directly set). For this
+> reason, changing the `MyState.text` previous to the `text_input` widget line
+> will do nothing to the value of the `text_input` widget.
 
 ## Contributing
 
