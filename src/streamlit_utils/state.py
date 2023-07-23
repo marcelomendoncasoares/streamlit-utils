@@ -82,16 +82,29 @@ class StreamlitStateMetaClass(type):
                 f"or static methods. Invalid methods: {not_class_methods!r}."
             )
 
+    @property
+    def _attrs(cls) -> Dict[str, Any]:
+        """
+        Return a dictionary with all annotated attributes of the class.
+        """
+        return {attr: cls.__dict__[attr] for attr in cls.__annotations__}
+
     def __getattribute__(cls, __name: str) -> Any:
         """
         Recover the keys formatted like `cls.__name__.<attr>` from `st.session_state`.
         """
         if __name.startswith("__"):
             return super().__getattribute__(__name)
-        possible_bind_key = f"{cls.__name__}.{__name}"
-        if possible_bind_key in st.session_state:
+        if (possible_bind_key := f"{cls.__name__}.{__name}") in st.session_state:
             setattr(cls, __name, st.session_state[possible_bind_key])
         return super().__getattribute__(__name)
+
+    def __repr__(cls) -> str:
+        short_repr = ", ".join(f"{k}={v!r}" for k, v in cls._attrs.items())
+        if len(one_line_repr := f"{cls.__name__}({short_repr})") < 50:
+            return one_line_repr
+        long_repr = "\n".join(f"    {k}={v!r}," for k, v in cls._attrs.items())
+        return f"{cls.__name__}(\n{long_repr}\n)"
 
 
 @overload
