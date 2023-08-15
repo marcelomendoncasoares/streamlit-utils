@@ -7,9 +7,6 @@ on:
       - "pyproject.toml"
       - "src/**"
 
-  # TODO: Remove after integration tests
-  workflow_dispatch:
-
 jobs:
   build:
     name: Upload release to PyPI
@@ -38,8 +35,6 @@ jobs:
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@v1.8.8
         with:
-          # TODO: Remove the test URL after integration tests
-          repository-url: https://test.pypi.org/legacy/
           verbose: true
 
       - name: Get publish version
