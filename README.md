@@ -1,13 +1,47 @@
-# streamlit-utils
-General utilities to make streamlit app creation easier in an object-oriented
+<h1 align="center">streamlit-utils</h1>
+<p align="center">
+  <a href="https://github.com/marcelomendoncasoares">
+    <img alt="GitHub" src="https://img.shields.io/badge/GitHub-marcelomendoncasoares-181717.svg?style=flat&logo=github" />
+  </a>
+  <a href="https://pypi.org/project/streamlit-utils">
+    <img alt="Python" src="https://img.shields.io/pypi/pyversions/streamlit-utils.svg" />
+  </a>
+  <a href="https://pypi.org/project/streamlit-utils/">
+    <img alt="PyPI" src="https://badge.fury.io/py/streamlit-utils.svg" />
+  </a>
+  <a href="https://github.com/marcelomendoncasoares/streamlit-utils/blob/main/LICENSE">
+    <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
+  </a>
+  <a href="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/validate.yml">
+    <img alt="CI" src="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/validate.yml/badge.svg?branch=main" />
+  </a>
+  <a href="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/release.yml">
+    <img alt="build" src="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/release.yml/badge.svg?branch=main" />
+  </a>
+  <a href="https://codecov.io/gh/marcelomendoncasoares/streamlit-utils" >
+    <img src="https://codecov.io/gh/marcelomendoncasoares/streamlit-utils/branch/main/graph/badge.svg?token=U2BIFOZGWM"/>
+  </a>
+  <a href="https://github.com/pre-commit/pre-commit">
+    <img alt="pre-commit" src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white">
+  </a>
+  <a href="http://mypy-lang.org/">
+    <img alt="Checked with mypy" src="http://www.mypy-lang.org/static/mypy_badge.svg">
+  </a>
+  <a href="https://github.com/psf/black">
+    <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
+  </a>
+</p>
+
+> General utilities to make streamlit app creation easier in an object-oriented
 manner. This package started with the idea for the `session_state` decorator to
 simplify the interaction with the `st.session_state` object. It has since grown
 to include other utilities as well.
 
-- [streamlit-utils](#streamlit-utils)
-  - [General utilities](#general-utilities)
-    - [The `session_state` decorator](#the-session_state-decorator)
-  - [Contributing](#contributing)
+- [General utilities](#general-utilities)
+  - [The `session_state` decorator](#the-session_state-decorator)
+- [Contributing](#contributing)
+
+---
 
 ## General utilities
 
