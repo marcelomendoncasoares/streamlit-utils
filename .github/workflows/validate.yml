@@ -6,11 +6,9 @@ on:
     types:
       - opened
       - synchronize
-    paths-ignore:
-      - README.md
-      - CHANGELOG.md
-      - .gitignore
-      - .github/**
+    paths:
+      - "src/**"
+      - "tests/**"
 
   # Important to generate the coverage for the main branch
   # that will feed the Codecov badge

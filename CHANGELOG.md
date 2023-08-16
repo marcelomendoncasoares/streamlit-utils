@@ -17,6 +17,7 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - Removed the `close` trigger of the `CI` workflow to prevent duplication.
+- Changed the paths of the `CI` workflow to only trigger when necessary.
 - Changed package classifiers (added several and removed the old ones).
 - Added two new URLs to the project metadata.
 
