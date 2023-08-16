@@ -13,7 +13,7 @@
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg" target="_blank" />
   </a>
   <a href="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/validate.yml">
-    <img alt="CI" src="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/validate.yml/badge.svg?branch=main" />
+    <img alt="tests" src="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/validate.yml/badge.svg?branch=main" />
   </a>
   <a href="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/release.yml">
     <img alt="build" src="https://github.com/marcelomendoncasoares/streamlit-utils/actions/workflows/release.yml/badge.svg?branch=main" />
