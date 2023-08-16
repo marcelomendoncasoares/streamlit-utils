@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "streamlit-utils"
-version = "0.1.0"
+version = "0.1.1"
 authors = [
     { name = "Marcelo Soares", email = "marcelo.me.soares@gmail.com" }
 ]
@@ -13,9 +13,22 @@ readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.8"
 classifiers = [
-    "Operating System :: MacOS :: MacOS X",
-    "Operating System :: Microsoft :: Windows",
-    "Operating System :: POSIX :: Linux",
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: Web Environment",
+    "Framework :: Streamlit",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Software Development :: Libraries :: Application Frameworks",
+    "Software Development :: Libraries :: Python Modules",
+    "Software Development :: Libraries :: Scientific/Engineering :: Visualization",
+    "Software Development :: Widget Sets",
+    "Typing :: Typed",
 ]
 dynamic = ["dependencies"]
 
@@ -27,7 +40,9 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/marcelomendoncasoares/streamlit-utils"
+"Homepage" = "https://github.com/marcelomendoncasoares/streamlit-utils"
+"Release Notes" = "https://github.com/marcelomendoncasoares/streamlit-utils/blob/main/CHANGELOG.md"
+"Source Code" = "https://github.com/marcelomendoncasoares/streamlit-utils"
 
 
 [tool.setuptools]
