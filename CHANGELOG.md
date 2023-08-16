@@ -12,7 +12,13 @@ project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Fixed
 
-- No changes to the code, only workflow fixes and improvements.
+- Refactored the `release` workflow that was not working properly.
+
+### Changed
+
+- Removed the `close` trigger of the `CI` workflow to prevent duplication.
+- Changed package classifiers (added several and removed the old ones).
+- Added two new URLs to the project metadata.
 
 ## [0.1.0] - 2023-08-14
 
