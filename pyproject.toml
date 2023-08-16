@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=67.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streamlit-utils"
+version = "0.1.0"
+authors = [
+    { name = "Marcelo Soares", email = "marcelo.me.soares@gmail.com" }
+]
+description = "General utilities to make streamlit app creation easier in an object-oriented manner."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.8"
+classifiers = [
+    "Operating System :: MacOS :: MacOS X",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+]
+dynamic = ["dependencies"]
+
+[project.optional-dependencies]
+dev = [
+    "pre-commit",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/marcelomendoncasoares/streamlit-utils"
+
+
+[tool.setuptools]
+package-data = { '*' = ["py.typed"] }
+
+[tool.setuptools.dynamic]
+dependencies = { file = ["requirements.txt"] }
+
+
+[tool.mypy]
+packages = ["streamlit_utils"]
+pretty = true
+show_error_context = true
+warn_no_return = true
+warn_redundant_casts = true
+warn_return_any = true
+warn_unreachable = true
+warn_unused_configs = true
+warn_unused_ignores = true
+
+
+[tool.coverage]
+run.source = ["src"]
