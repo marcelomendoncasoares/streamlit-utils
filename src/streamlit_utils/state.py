@@ -6,9 +6,9 @@ Contains utilities to simplify initialization and interaction with Streamlit's
 
 """
 
+import types
 import streamlit as st
 
-from inspect import ismethod
 from typing import Any, Dict, Callable, Optional, Tuple, Type, TypeVar, overload
 
 
@@ -63,7 +63,7 @@ class StreamlitStateMetaClass(type):
         for attr_name, attr_value in cls.__dict__.items():
             if attr_name.startswith("__"):
                 continue
-            if ismethod(attr_value):
+            if isinstance(attr_value, (staticmethod, classmethod, types.MethodType)):
                 attr_value = cls.__dict__[attr_name]
                 if not isinstance(attr_value, (staticmethod, classmethod)):
                     not_class_methods += (attr_name,)
